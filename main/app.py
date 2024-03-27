@@ -17,11 +17,11 @@ eta_auto = chiedi_eta_auto()
 
 if classe_ambientale is not None and potenza_motore is not None and regione is not None and eta_auto is not None:
     if regione == "Lazio":
-        print(f"\nclasse ambientale: Euro {classe_ambientale}\npotenza motore: {potenza_motore}kw\nregione: {regione}\netà auto: {eta_auto}")
+        print(f"\nclasse ambientale: Euro {classe_ambientale}\npotenza motore: {potenza_motore}kw\nregione: {regione}\netà auto: {eta_auto} anni")
         costo_bollo, costo_superbollo = calcola(classe_ambientale, potenza_motore, regione, eta_auto)
         if costo_superbollo:
-            print(f"costo bollo: €{costo_bollo:.2f}\ncosto superbollo: €{costo_superbollo:.2f}\ncosto totale: €{costo_bollo + costo_superbollo:.2f}")
+            print(f"costo bollo: {costo_bollo:.2f}€\ncosto superbollo: {costo_superbollo:.2f}€\ncosto totale: {costo_bollo + costo_superbollo:.2f}€")
         else:
-            print(f"costo bollo: €{costo_bollo:.2f}")
+            print(f"costo bollo: {costo_bollo:.2f}€")
     else:
         print("siamo spiacenti, ma dobbiamo ancora acquisire i dati per questa regione")
